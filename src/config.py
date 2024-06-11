@@ -1,9 +1,9 @@
 from colors import *
 
-LIST_LENGTH = 240
+LIST_LENGTH = 512
 
 RECT_WIDTH = 2
-RECT_HEIGHT = 1
+RECT_HEIGHT = 1.25
 
 TOP_OFFSET = 0
 

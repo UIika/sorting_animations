@@ -38,7 +38,7 @@ def start_sorting(sort, rects_list, screen):
                     i*RECT_WIDTH, SCREEN_HEIGHT-v*RECT_HEIGHT,
                     RECT_WIDTH, int(v*RECT_HEIGHT)+(v*RECT_HEIGHT > 0)
                 ))
-                pygame.time.wait(500//LIST_LENGTH)
+                pygame.time.wait(1000//LIST_LENGTH)
                 pygame.display.update()
             break
         update_rectangles(rectangles, screen, last_modified)
@@ -57,12 +57,20 @@ def main(*sorting_algotythms):
             
 if __name__ == "__main__":
     main(*(
+        heap_sort,
+        radix_sort,
+        quick_sort,
+        bitonic_sort,
         merge_sort,
         selection_sort,
-        #gnome_sort,
-        shell_sort,
-        insertion_sort,
         comb_sort,
-        shaker_sort,
-        bubble_sort,
-    )*10)
+        #shell_sort,
+    ))
+    
+    # main(*(
+    #     insertion_sort,
+    #     shaker_sort,
+    #     bubble_sort,
+    # ))
+    
+
